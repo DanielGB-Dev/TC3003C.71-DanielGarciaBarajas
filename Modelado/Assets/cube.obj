@@ -1,0 +1,10 @@
+# Wavefront OBJ format 
+
+# Geometry: 
+v 0 0 0 # A 
+v 6 0 0 # B 
+v 6 6 0 # C
+v 0 6 0 # D 
+
+# Topology: 
+f 1 2 3 4
