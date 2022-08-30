@@ -22,6 +22,7 @@ public class Shot : MonoBehaviour
         banderaDisparo = false;
         if (Input.GetKey(KeyCode.Space) && Time.time >= timeShot)
         {
+            //Debug.Log("shoot");
             timeShot = Time.time + 1 / effect.GetComponent<ShotMovement>().fire;
             banderaDisparo = true;
             showVfx();

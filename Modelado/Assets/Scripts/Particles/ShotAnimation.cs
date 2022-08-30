@@ -18,7 +18,7 @@ public class ShotAnimation : MonoBehaviour
     {
         if (bullet.GetComponent<Shot>().banderaDisparo)
         {
-            GunAnimator.SetTrigger("Shot");
+            GunAnimator.SetTrigger("Shoot");
         }
     }
 }
