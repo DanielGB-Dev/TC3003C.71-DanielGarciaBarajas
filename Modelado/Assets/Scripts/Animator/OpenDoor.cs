@@ -8,6 +8,10 @@ public class OpenDoor : MonoBehaviour
     private int phase;
     //public float jumpForce;
 
+    public AudioClip openAudio;
+    public AudioClip closeAudio;
+    public AudioSource audioSource;
+
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -27,12 +31,14 @@ public class OpenDoor : MonoBehaviour
                     anim.SetBool("OpenDoor", true);
                     anim.SetBool("CloseDoor", false);
                     phase++;
+                    audioSource.PlayOneShot(openAudio, 0.5f);
                 }
                 else
                 {
                     anim.SetBool("CloseDoor", true);
                     anim.SetBool("OpenDoor", false);
                     phase = 0;
+                    audioSource.PlayOneShot(closeAudio, 0.5f);
                 }
                 
             }
